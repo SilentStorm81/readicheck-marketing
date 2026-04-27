@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Readicheck Logo Variants</title>
+<style>
+  body {
+    margin: 0;
+    padding: 48px 32px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #F8FAFC;
+    color: #0F172A;
+  }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  p.intro { color: #64748B; margin: 0 0 48px; max-width: 640px; line-height: 1.6; }
+  .row { margin-bottom: 64px; }
+  .row h2 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #64748B; margin: 0 0 16px; }
+  .row .filename { font-size: 12px; color: #94A3B8; font-family: ui-monospace, monospace; margin-top: 8px; }
+  .frame {
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 32px;
+    display: inline-block;
+  }
+  .frame.dark {
+    background: #0F172A;
+    border-color: #1E293B;
+  }
+  .frame.cream {
+    background: #FFF7ED;
+  }
+  img.lockup-h { width: 480px; height: auto; display: block; }
+  img.lockup-s { width: 320px; height: auto; display: block; }
+  img.mark { width: 120px; height: 120px; display: block; }
+  img.icon { width: 144px; height: 144px; display: block; border-radius: 32px; }
+  .icon-sizes { display: flex; align-items: end; gap: 16px; }
+  .icon-sizes .ic { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 11px; color: #64748B; }
+  .icon-sizes .ic img { border-radius: 14%; }
+  .pair { display: flex; gap: 24px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<h1>Readicheck logo variants</h1>
+<p class="intro">All variants integrate the existing owl as-is. SVG sources live in this folder; raster PNGs can be exported at any size from these for app store assets.</p>
+
+<div class="row">
+  <h2>Horizontal lockup</h2>
+  <p class="filename">logo-horizontal.svg &middot; for headers, marketing, email signatures</p>
+  <div class="pair">
+    <div class="frame"><img class="lockup-h" src="logo-horizontal.svg" alt="Readicheck horizontal logo" /></div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Stacked lockup with tagline</h2>
+  <p class="filename">logo-stacked.svg &middot; for splash screens, social profiles, hero areas</p>
+  <div class="pair">
+    <div class="frame"><img class="lockup-s" src="logo-stacked.svg" alt="Readicheck stacked logo" /></div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Mark only (just the owl)</h2>
+  <p class="filename">logo-mark.svg &middot; for favicons, badges, in-app accent</p>
+  <div class="pair">
+    <div class="frame"><img class="mark" src="logo-mark.svg" alt="Readicheck owl mark" /></div>
+    <div class="frame cream"><img class="mark" src="logo-mark.svg" alt="Readicheck owl mark on cream" /></div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>App icon - cream background (recommended)</h2>
+  <p class="filename">logo-app-icon.svg &middot; Play Store icon, home-screen launcher</p>
+  <div class="icon-sizes">
+    <div class="ic"><img class="icon" style="width:144px;height:144px" src="logo-app-icon.svg" alt="App icon" /><span>144 px</span></div>
+    <div class="ic"><img class="icon" style="width:96px;height:96px" src="logo-app-icon.svg" alt="App icon" /><span>96 px</span></div>
+    <div class="ic"><img class="icon" style="width:64px;height:64px" src="logo-app-icon.svg" alt="App icon" /><span>64 px</span></div>
+    <div class="ic"><img class="icon" style="width:48px;height:48px" src="logo-app-icon.svg" alt="App icon" /><span>48 px</span></div>
+    <div class="ic"><img class="icon" style="width:32px;height:32px" src="logo-app-icon.svg" alt="App icon" /><span>32 px</span></div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>App icon - orange background (alt)</h2>
+  <p class="filename">logo-app-icon-orange.svg &middot; bolder, white owl on brand orange</p>
+  <div class="icon-sizes">
+    <div class="ic"><img class="icon" style="width:144px;height:144px" src="logo-app-icon-orange.svg" alt="App icon orange" /><span>144 px</span></div>
+    <div class="ic"><img class="icon" style="width:96px;height:96px" src="logo-app-icon-orange.svg" alt="App icon orange" /><span>96 px</span></div>
+    <div class="ic"><img class="icon" style="width:64px;height:64px" src="logo-app-icon-orange.svg" alt="App icon orange" /><span>64 px</span></div>
+    <div class="ic"><img class="icon" style="width:48px;height:48px" src="logo-app-icon-orange.svg" alt="App icon orange" /><span>48 px</span></div>
+  </div>
+</div>
+
+<div class="row">
+  <h2>Dark surface variant</h2>
+  <p class="filename">logo-horizontal-dark.svg &middot; white wordmark for dark headers / dark mode</p>
+  <div class="frame dark"><img class="lockup-h" src="logo-horizontal-dark.svg" alt="Readicheck logo on dark" /></div>
+</div>
+
+</body>
+</html>
