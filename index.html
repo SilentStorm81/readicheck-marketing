@@ -4,10 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Readicheck - A smart, delightful to-do list</title>
-<meta name="description" content="A focused, private, distraction-free task manager for Android. Your data stays on your device." />
+<meta name="description" content="A focused, simple task manager for Android. In sync across your devices, no ads, no third-party trackers." />
 <meta name="theme-color" content="#F97316" />
 <meta property="og:title" content="Readicheck" />
-<meta property="og:description" content="A smart, delightful to-do list for Android. Privacy-first." />
+<meta property="og:description" content="A smart, delightful to-do list for Android. In sync across your devices." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://readicheck.app" />
 <style>
@@ -25,7 +25,10 @@
   .hero h1 { font-size: clamp(36px, 6vw, 56px); margin: 16px 0 12px; line-height: 1.05; letter-spacing: -0.02em; }
   .hero p.tagline { font-size: clamp(15px, 1.8vw, 18px); color: var(--muted); max-width: 620px; margin: 0 auto 32px; }
   .hero p.tagline .nowrap { white-space: nowrap; }
-  .hero img.logo { display: block; margin: 0 auto 24px; width: 100%; max-width: 780px; height: auto; }
+  .hero .lockup { display: flex; align-items: center; justify-content: center; gap: clamp(12px, 2vw, 24px); margin: 0 auto 32px; flex-wrap: nowrap; }
+  .hero .lockup img.owl { width: clamp(64px, 11vw, 120px); height: auto; flex-shrink: 0; }
+  .hero .lockup .wordmark { font-size: clamp(48px, 9vw, 96px); font-weight: 800; line-height: 1; letter-spacing: -0.02em; color: var(--fg); display: inline-flex; align-items: baseline; }
+  .hero .lockup .wordmark img.k { height: 1.05em; width: auto; transform: translateY(0.16em); margin-left: -0.06em; }
   .hero .ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .hero .ctas a {
     background: var(--primary); color: white; padding: 14px 28px; border-radius: 999px;
@@ -44,11 +47,6 @@
   .card .icon { width: 44px; height: 44px; border-radius: 12px; background: var(--primary-light); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 14px; color: var(--primary); }
   .card .icon svg { width: 22px; height: 22px; stroke-width: 2; }
 
-  .privacy-banner { background: var(--primary-light); padding: 32px; border-radius: 18px; text-align: center; margin: 48px 0; }
-  .privacy-banner h2 { margin: 0 0 8px; font-size: 24px; }
-  .privacy-banner p { margin: 0; color: var(--fg); font-size: clamp(15px, 1.8vw, 18px); }
-  .privacy-banner a { color: var(--primary); font-weight: 600; }
-
   footer { padding: 32px 0 48px; border-top: 1px solid var(--border); margin-top: 64px; color: var(--muted); font-size: 14px; }
   footer .row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
   footer a { color: var(--muted); margin-right: 16px; text-decoration: none; }
@@ -57,9 +55,12 @@
 </head>
 <body>
 <section class="hero wrap">
-  <img class="logo" src="/logo/logo-horizontal.svg" alt="Readicheck" />
+  <div class="lockup" role="img" aria-label="Readicheck">
+    <img class="owl" src="/owl.png" alt="" />
+    <span class="wordmark"><span>Readichec</span><img class="k" src="/custom-k.png" alt="k" /></span>
+  </div>
   <h1>What's on your plate?</h1>
-  <p class="tagline">Tasks, simplified, private. Your tasks stay on your phone <span class="nowrap">- no&nbsp;account, no&nbsp;cloud, no&nbsp;ads.</span></p>
+  <p class="tagline">Tasks, simplified. A focused to-do list for Android.</p>
   <div class="ctas" id="download">
     <a href="#">Download on Google Play</a>
   </div>
@@ -106,18 +107,11 @@
     </div>
     <div class="card">
       <div class="icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
       </div>
-      <h3>Yours, forever</h3>
-      <p>Everything stored locally. No account. No login. No data leaving your device, ever.</p>
+      <h3>In sync wherever you go</h3>
+      <p>Start on your phone, finish on your laptop. Sign in to keep your tasks in sync across devices, or stay local. Your call.</p>
     </div>
-  </div>
-</section>
-
-<section class="wrap">
-  <div class="privacy-banner">
-    <h2>We collect zero data.</h2>
-    <p>Not your tasks. Not your usage. Not your location. Nothing.<br />Read the <a href="/privacy.html">full privacy policy</a> - it's short.</p>
   </div>
 </section>
 
